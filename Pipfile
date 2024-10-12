@@ -1,0 +1,25 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "==2.32.3"
+typer = "==0.12.4"
+psycopg2 = "==2.9.9"
+jupyter = "==1.0.0"
+pandas = "==2.2.2"
+matplotlib = "==3.9.2"
+SQLAlchemy = "==2.0.32"
+
+[dev-packages]
+requests = "==2.32.3"
+typer = "==0.12.4"
+psycopg2 = "==2.9.9"
+jupyter = "==1.0.0"
+pandas = "==2.2.2"
+matplotlib = "==3.9.2"
+SQLAlchemy = "==2.0.32"
+
+[requires]
+python_version = "3.10"

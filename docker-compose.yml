@@ -1,0 +1,16 @@
+services:
+    postgres:
+        image: postgres:16.4
+        environment:
+            - POSTGRES_USER=data_ex
+            - POSTGRES_PASSWORD=data_am
+            - POSTGRES_DB=data_exam
+        volumes:
+            - postgres-db-volume:/var/lib/postgresql/data
+            # Database tables creation, and data load.
+            - ./data/coin_data.sql:/docker-entrypoint-initdb.d/coin_data.sql
+        ports:
+            - 5435:5432
+volumes:
+    postgres-db-volume:
+        driver: local
